@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!-- Ny'Asia Dixon | September 25, 2026 -->
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Common Uses of jQuery</title>
+
+    <!-- Local jQuery file -->
+    <script src="jquery-3.7.1.min.js"></script>
+
+    <!-- CDN fallback if the local jQuery file fails -->
+    <script>
+        window.jQuery || document.write(
+            '<script src="https://code.jquery.com/jquery-3.7.1.min.js"><\/script>'
+        );
+    </script>
+
+    <!-- jQuery Validation plugin -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.21.0/dist/jquery.validate.min.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Common Uses of jQuery</h1>
+    </header>
+
+    <main>
+
+        <p id="summary">
+            jQuery is a JavaScript library that makes it easier to work with
+            HTML elements, handle events, create animations, and perform
+            other interactive tasks on webpages. It is also commonly used
+            for form validation and simplifying JavaScript code.
+        </p>
+
+        <p>
+            <a href="https://jquery.com/" target="_blank">jQuery</a>
+        </p>
+
+        <p>
+            <a href="https://jqueryvalidation.org/" target="_blank">
+                jQuery Validation Plugin
+            </a>
+        </p>
+
+        <h2>Contact Form</h2>
+
+        <form id="contact-form">
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <input type="submit" value="Submit">
+
+        </form>
+
+    </main>
+
+    <!-- jQuery changes the summary paragraph text color
+         and activates form validation. -->
+    <script>
+        $(document).ready(function() {
+
+            $("#summary").css("color", "purple");
+
+            $("#contact-form").validate();
+
+        });
+    </script>
+
+</body>
+
+</html>
